@@ -14,7 +14,7 @@ class NetworkBeerRepository: BeerRepository {
     private let baseURL = "https://api.punkapi.com/v2/"
     
     
-    func getRangomBeer() -> AnyPublisher<Beer?, Error> {
+    func getRandomBeer() -> AnyPublisher<Beer?, Error> {
         let url = baseURL + "/beers/random"
         return session.dataTaskPublisher(for: URL(string: url)!) //TODO: change !
             .tryMap{ data, response in

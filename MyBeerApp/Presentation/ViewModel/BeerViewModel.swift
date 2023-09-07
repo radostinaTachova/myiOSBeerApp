@@ -22,7 +22,7 @@ class BeerViewModel: ObservableObject {
     var cancellableSet = Set<AnyCancellable>()
     
     func getRandomBeer() {
-        let _ = beerRepository.getRangomBeer()
+        let _ = beerRepository.getRandomBeer()
             .sink(receiveCompletion: {
                 print("Received completion \($0)")
             }, receiveValue: { [unowned self] beer in

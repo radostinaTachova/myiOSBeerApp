@@ -10,7 +10,7 @@ import Combine
 
 protocol BeerRepository {
     
-    func getRangomBeer() -> AnyPublisher<Beer?, Error>
+    func getRandomBeer() -> AnyPublisher<Beer?, Error>
     
     func searchBeers(with name: String) -> AnyPublisher<[Beer]?, Error>
 }
