@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct MyBeerAppApp: App {
     var body: some Scene {
+        @StateObject var beerViewModel = BeerViewModel()
         WindowGroup {
-            ContentView()
+            ContentView(beerViewModel: beerViewModel)
         }
     }
 }

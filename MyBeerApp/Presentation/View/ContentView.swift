@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject var beerViewModel = BeerViewModel()
+    @ObservedObject var beerViewModel: BeerViewModel
     
     var body: some View {
         NavigationStack {
@@ -34,6 +34,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(beerViewModel: BeerViewModel())
     }
 }
